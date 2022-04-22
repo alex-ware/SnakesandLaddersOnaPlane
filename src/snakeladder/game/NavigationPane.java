@@ -179,6 +179,7 @@ public class NavigationPane extends GameGrid
     }
     int currentRound = nbRolls / gp.getNumberOfPlayers();
     int playerIndex = nbRolls % gp.getNumberOfPlayers();
+    //if any die left, return die value
     if (dieValues.get(playerIndex).size() > currentRound) {
       return dieValues.get(playerIndex).get(currentRound);
     }
@@ -302,6 +303,9 @@ public class NavigationPane extends GameGrid
     showPips("Pips: " + nb);
     showScore("# Rolls: " + (++nbRolls));
     gp.getPuppet().go(nb);
+
+    //apply strategy at the end
+    gp.getPuppet().getStrategy().doStrategy(6);
   }
 
   void prepareBeforeRoll() {
@@ -320,6 +324,7 @@ public class NavigationPane extends GameGrid
     roll(getDieValue());
   }
 
+  //get random roll number
   private void roll(int rollNumber)
   {
     int nb = rollNumber;
@@ -330,6 +335,7 @@ public class NavigationPane extends GameGrid
     showPips("");
 
     removeActors(Die.class);
+    //Die(number, navigation pane)
     Die die = new Die(nb, this);
     addActor(die, dieBoardLocation);
   }

@@ -16,6 +16,7 @@ public class GamePane extends GameGrid
   private List<Puppet> puppets =  new ArrayList<>();
   private List<Boolean> playerManualMode;
   private ArrayList<Connection> connections = new ArrayList<Connection>();
+  //start outside grid
   final Location startLocation = new Location(-1, 9);  // outside grid
   final int animationStep = 10;
   public static final int NUMBER_HORIZONTAL_CELLS = 10;
@@ -34,6 +35,14 @@ public class GamePane extends GameGrid
     setupPlayers(properties);
     setBgImagePath("sprites/gamepane_snakeladder.png");
   }
+  //for task4
+  public void reverseAllConnection(){
+    for (Connection c:connections
+         ) {
+      c.reverse();
+    }
+  }
+
 
   void setupPlayers(Properties properties) {
     numberOfPlayers = Integer.parseInt(properties.getProperty("players.count"));
@@ -74,6 +83,10 @@ public class GamePane extends GameGrid
     return puppets.get(currentPuppetIndex);
   }
 
+  //return next puppet
+  Puppet getNextPuppet(){
+    return puppets.get((currentPuppetIndex+1)%numberOfPlayers);
+  }
   void switchToNextPuppet() {
     currentPuppetIndex = (currentPuppetIndex + 1) % numberOfPlayers;
   }

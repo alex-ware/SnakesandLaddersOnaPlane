@@ -1,2 +1,5 @@
-package snakeladder.game;public interface Strategy {
+package snakeladder.game;
+
+public interface Strategy {
+    public void doStrategy( int maxDieValue);
 }

@@ -14,12 +14,18 @@ public class Puppet extends Actor
   private int dy;
   private boolean isAuto;
   private String puppetName;
+  private Strategy strategy;
 
   Puppet(GamePane gp, NavigationPane np, String puppetImage)
   {
     super(puppetImage);
     this.gamePane = gp;
     this.navigationPane = np;
+    this.strategy=new SimpleStrategy(gp);
+  }
+
+  public Strategy getStrategy() {
+    return strategy;
   }
 
   public boolean isAuto() {
@@ -82,6 +88,7 @@ public class Puppet extends Actor
 
   public void act()
   {
+
     if ((cellIndex / 10) % 2 == 0)
     {
       if (isHorzMirror())
@@ -94,6 +101,7 @@ public class Puppet extends Actor
     }
 
     // Animation: Move on connection
+    // puppet land on a connection
     if (currentCon != null)
     {
       int x = gamePane.x(y, currentCon);
@@ -101,6 +109,7 @@ public class Puppet extends Actor
       y += dy;
 
       // Check end of connection
+      // ?dy = gamePane.animationStep;
       if ((dy > 0 && (y - gamePane.toPoint(currentCon.locEnd).y) > 0)
         || (dy < 0 && (y - gamePane.toPoint(currentCon.locEnd).y) < 0))
       {
@@ -109,6 +118,8 @@ public class Puppet extends Actor
         setLocation(currentCon.locEnd);
         cellIndex = currentCon.cellEnd;
         setLocationOffset(new Point(0, 0));
+        // set connection null to avoid if the other player toggle strategy, this player
+        // will travel down the connection again
         currentCon = null;
         navigationPane.prepareRoll(cellIndex);
       }
