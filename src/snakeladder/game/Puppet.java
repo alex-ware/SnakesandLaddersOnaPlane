@@ -23,12 +23,21 @@ public class Puppet extends Actor
   public void setBack(boolean isBack) {
     this.isBack = isBack;
   }
+  // task 5
+  private  Statistics stats;
 
-  Puppet(GamePane gp, NavigationPane np, String puppetImage)
+  public Statistics getStats() {
+    return this.stats;
+  }
+
+  Puppet(GamePane gp, NavigationPane np, String puppetImage, String puppetName)
   {
     super(puppetImage);
     this.gamePane = gp;
     this.navigationPane = np;
+    this.puppetName = puppetName;
+
+    this.stats = new Statistics(puppetName);
   }
 
   public boolean isAuto() {
@@ -55,6 +64,10 @@ public class Puppet extends Actor
       setLocation(gamePane.startLocation);
     }
     this.nbSteps = nbSteps;
+    // task 5
+    if (nbSteps > 0) {
+      stats.rolled(nbSteps);
+    }
 
     // task 2
     // check if the lowest number has been rolled
@@ -163,6 +176,12 @@ public class Puppet extends Actor
             navigationPane.showStatus("Climbing...");
             navigationPane.playSound(GGSound.BOING);
           }
+          // task 5 determine which connection and record it
+          if (currentCon.cellEnd - currentCon.cellStart > 0) {
+            stats.up();
+          } else {
+            stats.down();
+          }
         }
         else
         {
@@ -171,11 +190,11 @@ public class Puppet extends Actor
         }
       }
     }
-    Puppet opPuppet = gamePane.getNextPuppet();
+    /* Puppet opPuppet = gamePane.getNextPuppet();
     if (cellIndex != 0 && opPuppet.getCellIndex() != 0 && cellIndex == opPuppet.getCellIndex()) {
       opPuppet.setBack(true);
       opPuppet.go(-1);
-    }
+    } */
   }
 
 }
