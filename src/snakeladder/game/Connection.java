@@ -10,6 +10,10 @@ public abstract class Connection
   int cellEnd;
   // for task 4.a
   boolean isReversed=false;
+  public int getCellStart(){return cellStart;}
+  public int getCellEnd(){return cellEnd;}
+
+
   Connection(int cellStart, int cellEnd)
   {
     this.cellStart = cellStart;
@@ -24,11 +28,23 @@ public abstract class Connection
   // if a player reverse a connection, set the connection to reversed,
   // switch back when a player's turn is over
   public void reverse() {
+
     isReversed = !isReversed;
     int temp=cellEnd;
     cellEnd=cellStart;
-    cellStart=cellEnd;
+    cellStart=temp;
+    //set new loc
+    locStart = GamePane.cellToLocation(cellStart);
+    locEnd = GamePane.cellToLocation(cellEnd);
   }
+  //for task 4.a
+  public void setReversed(boolean isReversed){
+    if(this.isReversed==isReversed) return;
+    else{
+      reverse();
+    }
+  }
+
   //for task 4.a
   public boolean isReversed() {
     return isReversed;

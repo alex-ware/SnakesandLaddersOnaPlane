@@ -168,6 +168,9 @@ public class Puppet extends Actor
         }
       }
     }
+    //for t4
+    //apply strategy at the end
+    strategy.doStrategy(6);
   }
 
 }

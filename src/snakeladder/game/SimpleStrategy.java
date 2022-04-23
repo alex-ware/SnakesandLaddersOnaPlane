@@ -19,13 +19,19 @@ public class SimpleStrategy implements Strategy{
         int countDown=0;
 
         int opponentIndex= oppoPuppet.getCellIndex();
+        System.out.println("Oppo Cell index: "+opponentIndex);
 
-
-        for(int i=opponentIndex+1; i<opponentIndex+maxDieValue; i++){
-            Connection con=gp.getConnectionAt(GamePane.cellToLocation(i));
+        for(int i=opponentIndex+1; i<=opponentIndex+maxDieValue; i++){
+            //break loop when exceed cell index
+            if(i==gp.NUMBER_HORIZONTAL_CELLS* gp.NUMBER_VERTICAL_CELLS)
+                break;
+            Connection con=gp.isConnectionAt(GamePane.cellToLocation(i));
             if(con!=null){
-                int start=con.cellStart;
-                int end=con.cellEnd;
+                System.out.println("Find Connection");
+                int start=con.getCellStart();
+                int end=con.getCellEnd();
+                System.out.println("start: "+start);
+                System.out.println("end: "+end);
                 if(start<end){
                     countUp++;
                 }
@@ -33,7 +39,10 @@ public class SimpleStrategy implements Strategy{
                     countDown++;
                 }
             }
+
         }
+        System.out.println("countUP:"+ countUp);
+        System.out.println("countDOWN:"+ countDown);
         if(countUp>=countDown){
             gp.reverseAllConnection();
             System.out.println("SimpleStrategy applied");

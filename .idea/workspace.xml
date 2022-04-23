@@ -2,38 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5094d53c-62c7-4eb5-8b12-aa8413e2d435" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SnakesandLaddersOnaPlane.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/snakeladder/game/SimpleStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/snakeladder/game/Strategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SnakesandLaddersOnaPlane.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Connection.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Connection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Die.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Die.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/GameInitialiser.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/GameInitialiser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/GamePane.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/GamePane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/GamePlayCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/GamePlayCallback.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Ladder.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Ladder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$ManualDieButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$ManualDieButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$SimulatedPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$SimulatedPlayer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Puppet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Puppet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Snake.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Snake.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/custom/CustomGGButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/custom/CustomGGButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/utility/BackgroundDrawing.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/utility/BackgroundDrawing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/utility/PropertiesLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/utility/PropertiesLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/utility/ServicesRandom.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/utility/ServicesRandom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/SimpleStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/SimpleStrategy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/snakeladder/game/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/snakeladder/game/Connection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/snakeladder/game/GamePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/snakeladder/game/GamePane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/snakeladder/game/NavigationPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/snakeladder/game/NavigationPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/snakeladder/game/Puppet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/snakeladder/game/Puppet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snakeladder/game/SimpleStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/snakeladder/game/SimpleStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +31,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="289vCBsMqC9fWq6oBJfmyNZ546w" />
   <component name="ProjectViewState">
