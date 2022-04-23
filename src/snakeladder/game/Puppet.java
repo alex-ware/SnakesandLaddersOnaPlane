@@ -171,11 +171,6 @@ public class Puppet extends Actor
         }
       }
     }
-    Puppet opPuppet = gamePane.getNextPuppet();
-    if (cellIndex != 0 && opPuppet.getCellIndex() != 0 && cellIndex == opPuppet.getCellIndex()) {
-      opPuppet.setBack(true);
-      opPuppet.go(-1);
-    }
   }
 
 }

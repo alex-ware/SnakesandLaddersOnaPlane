@@ -296,7 +296,7 @@ public class NavigationPane extends GameGrid
       showResult(result);
       //task 3
       //the player who just finished its turn
-      /* int newIndex = gp.getCurrentPuppetIndex();
+      int newIndex = gp.getCurrentPuppetIndex();
       //determine who are in the same position as last player
       int i = 0;
       for (Puppet p : gp.getAllPuppets()) {
@@ -305,7 +305,7 @@ public class NavigationPane extends GameGrid
           p.go(-1);
         }
         i++;
-      } */
+      }
 
       gp.switchToNextPuppet();
       // System.out.println("current puppet - auto: " + gp.getPuppet().getPuppetName() + "  " + gp.getPuppet().isAuto() );
