@@ -198,6 +198,9 @@ public class NavigationPane extends GameGrid
 
   void createGui()
   {
+    //for t4
+    isToggle=gp.getAllReversed();
+
     addActor(new Actor("sprites/dieboard.gif"), dieBoardLocation);
 
     handBtn.addButtonListener(this);
@@ -216,8 +219,14 @@ public class NavigationPane extends GameGrid
     addActor(toggleCheck, toggleModeLocation);
     toggleCheck.addCheckButtonListener(new GGCheckButtonListener() {
       @Override
-      public void buttonChecked(GGCheckButton ggCheckButton, boolean checked) {
-        isToggle = checked;
+      public void buttonChecked(GGCheckButton ggCheckButton, boolean checked)
+      {
+        //for t4, check toggle button manually to set all connection reversed
+        if(!isAuto){
+          isToggle = checked;
+          gp.setAllReversed(checked);
+        }
+
       }
     });
 
@@ -278,6 +287,9 @@ public class NavigationPane extends GameGrid
 
   void prepareRoll(int currentIndex)
   {
+
+
+
     if (currentIndex == 100)  // Game over
     {
       playSound(GGSound.FADE);
@@ -331,6 +343,8 @@ public class NavigationPane extends GameGrid
     showPips("Pips: " + nb);
     showScore("# Rolls: " + (++nbRolls));
     gp.getPuppet().go(nb);
+    //for t4, toggle button check animation
+    toggleCheck.setChecked(gp.getAllReversed());
   }
 
   void prepareBeforeRoll() {

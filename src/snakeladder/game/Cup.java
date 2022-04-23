@@ -10,6 +10,7 @@ public class Cup {
     private NavigationPane np;
     private int totalRolled;
 
+
     public Cup(NavigationPane np) {
         this.np = np;
         this.dice = new ArrayList<>();

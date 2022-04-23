@@ -14,6 +14,7 @@ public class Puppet extends Actor
   private int dy;
   private boolean isAuto;
   private String puppetName;
+  private Strategy strategy;
 
   //task 2
   private boolean isLowest = false;
@@ -23,6 +24,11 @@ public class Puppet extends Actor
   public void setBack(boolean isBack) {
     this.isBack = isBack;
   }
+  //for t4
+  public Strategy getStrategy() {
+    return strategy;
+  }
+
   // task 5
   private  Statistics stats;
 
@@ -36,7 +42,8 @@ public class Puppet extends Actor
     this.gamePane = gp;
     this.navigationPane = np;
     this.puppetName = puppetName;
-
+    //for t4
+    this.strategy=new SimpleStrategy(gp);
     this.stats = new Statistics(puppetName);
   }
 
@@ -190,11 +197,10 @@ public class Puppet extends Actor
         }
       }
     }
-    /* Puppet opPuppet = gamePane.getNextPuppet();
-    if (cellIndex != 0 && opPuppet.getCellIndex() != 0 && cellIndex == opPuppet.getCellIndex()) {
-      opPuppet.setBack(true);
-      opPuppet.go(-1);
-    } */
+    //for t4
+    //apply strategy at the end
+    if(this!=null)
+    this.strategy.doStrategy(navigationPane.getNumberOfDice()*6);
   }
 
 }

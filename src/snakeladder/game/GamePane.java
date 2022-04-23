@@ -22,12 +22,47 @@ public class GamePane extends GameGrid
   public static final int NUMBER_VERTICAL_CELLS = 10;
   private final int MAX_PUPPET_SPRITES = 4;
 
+  //for t4
+  private boolean allReversed=false;
+  //for t4
+  public void reverseAllConnection(){
+    for (Connection c:connections
+    ) {
+      c.reverse();
+    }
+    allReversed=!allReversed;
+  }
+  public boolean getAllReversed(){return allReversed;}
+
+  public void setAllReversed(boolean allReversed) {
+    System.out.println("Set All Reversed");
+    this.allReversed = allReversed;
+    for (Connection c:connections
+    ) {
+      c.setReversed(allReversed);
+    }
+  }
+
   // for t4
   // return next puppet
   Puppet getNextPuppet(){
+    if(puppets.size()!=0)
     return puppets.get((currentPuppetIndex+1)%numberOfPlayers);
+    else
+      return null;
   }
 
+  // for t4
+  // return if current cell is a connection
+  Connection isConnectionAt(Location loc){
+    for(Connection con:connections){
+      if(con.locStart.equals(loc)||con.locEnd.equals(loc))
+        return con;
+    }
+    return null;
+  }
+
+  //task 3
   public int getCurrentPuppetIndex() {
     return this.currentPuppetIndex;
   }
@@ -81,7 +116,10 @@ public class GamePane extends GameGrid
 
   Puppet getPuppet()
   {
+    if(puppets.size()!=0)
     return puppets.get(currentPuppetIndex);
+    else
+      return null;
   }
 
   void switchToNextPuppet() {
@@ -102,6 +140,9 @@ public class GamePane extends GameGrid
     return numberOfPlayers;
   }
 
+
+  // only return connnection when the current cell is a start location
+  // of a connection
   Connection getConnectionAt(Location loc)
   {
     for (Connection con : connections)
