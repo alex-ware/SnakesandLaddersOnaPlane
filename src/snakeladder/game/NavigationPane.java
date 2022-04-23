@@ -294,6 +294,7 @@ public class NavigationPane extends GameGrid
       showStatus("Done. Click the hand!");
       String result = gp.getPuppet().getPuppetName() + " - pos: " + currentIndex;
       showResult(result);
+/*
       //task 3
       //the player who just finished its turn
       int newIndex = gp.getCurrentPuppetIndex();
@@ -305,8 +306,9 @@ public class NavigationPane extends GameGrid
           p.go(-1);
         }
         i++;
+        gp.switchToNextPuppet();
       }
-
+*/
       gp.switchToNextPuppet();
       // System.out.println("current puppet - auto: " + gp.getPuppet().getPuppetName() + "  " + gp.getPuppet().isAuto() );
 
