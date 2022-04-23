@@ -42,7 +42,7 @@ public class GamePane extends GameGrid
       c.setReversed(allReversed);
     }
   }
-
+/* unused methods
   // for t4
   // return next puppet
   Puppet getNextPuppet(){
@@ -61,7 +61,7 @@ public class GamePane extends GameGrid
     }
     return null;
   }
-
+*/
   //task 3
   public int getCurrentPuppetIndex() {
     return this.currentPuppetIndex;

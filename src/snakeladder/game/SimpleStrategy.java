@@ -12,9 +12,9 @@ public class SimpleStrategy implements Strategy{
     @Override
     public void doStrategy(int maxDieValue) {
 
-        Puppet thisPuppet=gp.getPuppet();
+
         Puppet oppoPuppet=gp.getPuppet();
-        if(thisPuppet!=null&&oppoPuppet!=null){
+        if(oppoPuppet!=null){
             int countUp=0;
             int countDown=0;
 
