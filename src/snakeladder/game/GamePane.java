@@ -22,6 +22,16 @@ public class GamePane extends GameGrid
   public static final int NUMBER_VERTICAL_CELLS = 10;
   private final int MAX_PUPPET_SPRITES = 4;
 
+  // for t4
+  // return next puppet
+  Puppet getNextPuppet(){
+    return puppets.get((currentPuppetIndex+1)%numberOfPlayers);
+  }
+
+  public int getCurrentPuppetIndex() {
+    return this.currentPuppetIndex;
+  }
+
   GamePane(Properties properties)
   {
     setSimulationPeriod(100);

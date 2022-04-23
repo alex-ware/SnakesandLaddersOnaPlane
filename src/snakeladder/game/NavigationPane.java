@@ -21,8 +21,12 @@ public class NavigationPane extends GameGrid
       {
         Monitor.putSleep();
         handBtn.show(1);
-       roll(getDieValue());
-        delay(1000);
+        // add multiple dice function to simulated player
+        // add a for loop
+        for (int i = 0; i < numberOfDice; i++) {
+          roll(getDieValue());
+          delay(1000);
+        }
         handBtn.show(0);
       }
     }
@@ -82,10 +86,17 @@ public class NavigationPane extends GameGrid
   private java.util.List<java.util.List<Integer>> dieValues = new ArrayList<>();
   private GamePlayCallback gamePlayCallback;
 
+  private int numberOfDice;
+  public int getNumberOfDice() {
+    return numberOfDice;
+  }
+
+  private Cup cup = new Cup(this);
+
   NavigationPane(Properties properties)
   {
     this.properties = properties;
-    int numberOfDice =  //Number of six-sided dice
+    this.numberOfDice =  //Number of six-sided dice
             (properties.getProperty("dice.count") == null)
                     ? 1  // default
                     : Integer.parseInt(properties.getProperty("dice.count"));
@@ -283,6 +294,21 @@ public class NavigationPane extends GameGrid
       showStatus("Done. Click the hand!");
       String result = gp.getPuppet().getPuppetName() + " - pos: " + currentIndex;
       showResult(result);
+/*
+      //task 3
+      //the player who just finished its turn
+      int newIndex = gp.getCurrentPuppetIndex();
+      //determine who are in the same position as last player
+      int i = 0;
+      for (Puppet p : gp.getAllPuppets()) {
+        if (i != newIndex && p.getCellIndex() == currentIndex) {
+          p.setBack(true);
+          p.go(-1);
+        }
+        i++;
+        gp.switchToNextPuppet();
+      }
+*/
       gp.switchToNextPuppet();
       // System.out.println("current puppet - auto: " + gp.getPuppet().getPuppetName() + "  " + gp.getPuppet().isAuto() );
 
@@ -330,8 +356,11 @@ public class NavigationPane extends GameGrid
     showPips("");
 
     removeActors(Die.class);
-    Die die = new Die(nb, this);
-    addActor(die, dieBoardLocation);
+    //Die die = new Die(nb, this);
+    // replace with rolling with cup class
+    cup.roll(nb);
+
+    addActor(cup.getAllDice().get(cup.getAllDice().size() - 1), dieBoardLocation);
   }
 
   public void buttonPressed(GGButton btn)

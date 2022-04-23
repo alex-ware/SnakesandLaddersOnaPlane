@@ -15,6 +15,15 @@ public class Puppet extends Actor
   private boolean isAuto;
   private String puppetName;
 
+  //task 2
+  private boolean isLowest = false;
+  //task 3
+  private boolean isBack = false;
+  //task 3
+  public void setBack(boolean isBack) {
+    this.isBack = isBack;
+  }
+
   Puppet(GamePane gp, NavigationPane np, String puppetImage)
   {
     super(puppetImage);
@@ -46,6 +55,15 @@ public class Puppet extends Actor
       setLocation(gamePane.startLocation);
     }
     this.nbSteps = nbSteps;
+
+    // task 2
+    // check if the lowest number has been rolled
+    if (nbSteps == navigationPane.getNumberOfDice()) {
+      isLowest = true;
+    } else {
+      isLowest = false;
+    }
+
     setActEnabled(true);
   }
 
@@ -59,25 +77,17 @@ public class Puppet extends Actor
     return cellIndex;
   }
 
-  private void moveToNextCell()
-  {
-    int tens = cellIndex / 10;
-    int ones = cellIndex - tens * 10;
-    if (tens % 2 == 0)     // Cells starting left 01, 21, .. 81
-    {
-      if (ones == 0 && cellIndex > 0)
-        setLocation(new Location(getX(), getY() - 1));
-      else
-        setLocation(new Location(getX() + 1, getY()));
+  // deleting moveToNextCell method and replace with moveToCell
+
+  //task 3
+  // changing cell index based on no. of steps left to act
+  private void moveToCell(int nbSteps) {
+    if (nbSteps > 0) {
+      cellIndex++;
+    } else if (nbSteps < 0) {
+      cellIndex--;
     }
-    else     // Cells starting left 20, 40, .. 100
-    {
-      if (ones == 0)
-        setLocation(new Location(getX(), getY() - 1));
-      else
-        setLocation(new Location(getX() - 1, getY()));
-    }
-    cellIndex++;
+    setLocation(GamePane.cellToLocation(cellIndex));
   }
 
   public void act()
@@ -94,7 +104,8 @@ public class Puppet extends Actor
     }
 
     // Animation: Move on connection
-    if (currentCon != null)
+    // adding both conditions in task 2 to satisfy new rules
+    if (currentCon != null && !(isLowest && currentCon.cellEnd - currentCon.cellStart < 0))
     {
       int x = gamePane.x(y, currentCon);
       setPixelLocation(new Point(x, y));
@@ -115,10 +126,11 @@ public class Puppet extends Actor
       return;
     }
 
+
     // Normal movement
-    if (nbSteps > 0)
+    if (nbSteps != 0)
     {
-      moveToNextCell();
+      moveToCell(nbSteps);
 
       if (cellIndex == 100)  // Game over
       {
@@ -127,11 +139,13 @@ public class Puppet extends Actor
         return;
       }
 
-      nbSteps--;
+      // task 3
+      if (nbSteps > 0) nbSteps--;
+      if (nbSteps < 0) nbSteps++;
       if (nbSteps == 0)
       {
         // Check if on connection start
-        if ((currentCon = gamePane.getConnectionAt(getLocation())) != null)
+        if ((currentCon = gamePane.getConnectionAt(getLocation())) != null && !(isLowest && currentCon.cellEnd - currentCon.cellStart < 0))
         {
           gamePane.setSimulationPeriod(50);
           y = gamePane.toPoint(currentCon.locStart).y;
@@ -160,3 +174,4 @@ public class Puppet extends Actor
   }
 
 }
+
