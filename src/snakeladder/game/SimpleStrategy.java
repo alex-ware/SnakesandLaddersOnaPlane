@@ -4,17 +4,17 @@ import javax.xml.stream.Location;
 
 public class SimpleStrategy implements Strategy{
 
-    GamePane gp;
-    public SimpleStrategy(GamePane gp){
-        this.gp=gp;
-    }
+
 
     @Override
-    public void doStrategy(int maxDieValue) {
+    public void doStrategy(GamePane gp,int maxDieValue) {
 
 
         Puppet oppoPuppet=gp.getPuppet();
         if(oppoPuppet!=null){
+            if(gp.getAllReversed()&&oppoPuppet.getCellIndex()==0||gp.getNextPuppet().getCellIndex()==0){
+                return;
+            }
             int countUp=0;
             int countDown=0;
 
@@ -46,7 +46,8 @@ public class SimpleStrategy implements Strategy{
             System.out.println("countDOWN:"+ countDown);
             if(countUp>=countDown){
                 gp.reverseAllConnection();
-                System.out.println("SimpleStrategy applied");
+                System.out.println("SimpleStrategy applied"+ gp.getAllReversed());
+                
             }
         }
 

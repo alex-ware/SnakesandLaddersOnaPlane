@@ -43,7 +43,7 @@ public class Puppet extends Actor
     this.navigationPane = np;
     this.puppetName = puppetName;
     //for t4
-    this.strategy=new SimpleStrategy(gp);
+    this.strategy=new SimpleStrategy();
     this.stats = new Statistics(puppetName);
   }
 
@@ -200,7 +200,8 @@ public class Puppet extends Actor
     //for t4
     //apply strategy at the end
     if(this!=null)
-    this.strategy.doStrategy(navigationPane.getNumberOfDice()*6);
+    this.strategy.doStrategy(gamePane,navigationPane.getNumberOfDice()*6);
+
   }
 
 }

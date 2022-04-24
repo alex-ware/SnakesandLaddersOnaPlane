@@ -42,7 +42,7 @@ public class GamePane extends GameGrid
       c.setReversed(allReversed);
     }
   }
-/* unused methods
+
   // for t4
   // return next puppet
   Puppet getNextPuppet(){
@@ -51,7 +51,7 @@ public class GamePane extends GameGrid
     else
       return null;
   }
-
+/* unused methods
   // for t4
   // return if current cell is a connection
   Connection isConnectionAt(Location loc){

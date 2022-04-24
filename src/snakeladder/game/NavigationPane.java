@@ -78,7 +78,7 @@ public class NavigationPane extends GameGrid
   private boolean isAuto;
   private GGCheckButton autoChk;
   private boolean isToggle = false;
-  private GGCheckButton toggleCheck =
+  public GGCheckButton toggleCheck =
           new GGCheckButton("Toggle Mode", YELLOW, TRANSPARENT, isToggle);
   private int nbRolls = 0;
   private volatile boolean isGameOver = false;
@@ -343,8 +343,12 @@ public class NavigationPane extends GameGrid
     showPips("Pips: " + nb);
     showScore("# Rolls: " + (++nbRolls));
     gp.getPuppet().go(nb);
+
+
     //for t4, toggle button check animation
     toggleCheck.setChecked(gp.getAllReversed());
+
+
   }
 
   void prepareBeforeRoll() {
