@@ -287,9 +287,15 @@ public class NavigationPane extends GameGrid
 
   void prepareRoll(int currentIndex)
   {
-
-
-
+    //task 3, skip turn when isBack is true
+    if( gp.getPuppet().isBack()==true){
+      gp.getPuppet().setBack(false);
+      return;
+    }
+    /*
+    for(Puppet p:gp.getAllPuppets())
+    p.setBack(false);
+    */
     if (currentIndex == 100)  // Game over
     {
       playSound(GGSound.FADE);
@@ -323,7 +329,7 @@ public class NavigationPane extends GameGrid
         }
         i++;
       }
-
+      //if(!gp.getAllPuppets().get(newIndex).isBack() )
       gp.switchToNextPuppet();
       // System.out.println("current puppet - auto: " + gp.getPuppet().getPuppetName() + "  " + gp.getPuppet().isAuto() );
 

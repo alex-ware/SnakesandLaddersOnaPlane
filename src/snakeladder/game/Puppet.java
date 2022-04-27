@@ -21,6 +21,7 @@ public class Puppet extends Actor
   //task 3
   private boolean isBack = false;
   //task 3
+  public boolean isBack(){return isBack;}
   public void setBack(boolean isBack) {
     this.isBack = isBack;
   }
@@ -65,7 +66,7 @@ public class Puppet extends Actor
 
   void go(int nbSteps)
   {
-    if (cellIndex == 100)  // after game over
+    if (cellIndex >= 100)  // after game over
     {
       cellIndex = 0;
       setLocation(gamePane.startLocation);
@@ -153,7 +154,7 @@ public class Puppet extends Actor
     {
       moveToCell(nbSteps);
 
-      if (cellIndex == 100)  // Game over
+      if (cellIndex >= 100)  // Game over
       {
         setActEnabled(false);
         navigationPane.prepareRoll(cellIndex);

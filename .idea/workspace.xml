@@ -1,41 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="518f76ed-788b-474f-b109-85042d568dea" name="Default Changelist" comment="fix Strategy calling multiple times when one of the puppets on cell index 0">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_24_2022_10_08_AM_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_24_2022_10_08_AM__Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/snakeladder/game/SimpleStrategy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/snakeladder/game/Statistics.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/snakeladder/game/Strategy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diagrams/DCD.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diagrams/DM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diagrams/Diagrams.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Report.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Connection.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Connection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Cup.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Cup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Die.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Die.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/GameInitialiser.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/GameInitialiser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/GamePane.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/GamePane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/GamePlayCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/GamePlayCallback.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Ladder.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Ladder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$ManualDieButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$ManualDieButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$SimulatedPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$SimulatedPlayer.class" afterDir="false" />
+    <list default="true" id="518f76ed-788b-474f-b109-85042d568dea" name="Default Changelist" comment="add diagrams">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Puppet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Puppet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Snake.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Snake.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/custom/CustomGGButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/custom/CustomGGButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/utility/BackgroundDrawing.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/utility/BackgroundDrawing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/utility/PropertiesLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/utility/PropertiesLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/snakeladder/utility/ServicesRandom.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/utility/ServicesRandom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagrams/Blank diagram - Page 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/SimpleStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/SimpleStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snakeladder/game/NavigationPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/snakeladder/game/NavigationPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/snakeladder/game/Puppet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/snakeladder/game/Puppet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snakeladder/game/SimpleStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/snakeladder/game/SimpleStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650768345533</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add diagrams">
+      <created>1651041812317</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651041812317</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,6 +89,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix Strategy calling multiple times when one of the puppets on cell index 0" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix Strategy calling multiple times when one of the puppets on cell index 0" />
+    <MESSAGE value="add diagrams" />
+    <option name="LAST_COMMIT_MESSAGE" value="add diagrams" />
   </component>
 </project>
