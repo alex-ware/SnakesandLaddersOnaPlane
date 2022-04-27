@@ -322,7 +322,6 @@ public class NavigationPane extends GameGrid
       for (Puppet p : gp.getAllPuppets()) {
         if (i != newIndex && p.getCellIndex() == currentIndex) {
           p.setBack(true);
-          p.go(-1);
         }
         i++;
       }
