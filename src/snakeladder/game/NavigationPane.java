@@ -292,10 +292,7 @@ public class NavigationPane extends GameGrid
       gp.getPuppet().setBack(false);
       return;
     }
-    /*
-    for(Puppet p:gp.getAllPuppets())
-    p.setBack(false);
-    */
+
     if (currentIndex == 100)  // Game over
     {
       playSound(GGSound.FADE);
