@@ -2,6 +2,7 @@ package snakeladder.game;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Statistics {
     String playerName;
@@ -32,7 +33,17 @@ public class Statistics {
 
     @Override
     public String toString() {
-        String stats = String.format("%s rolled: %s, up=%d, down=%d",playerName, rolledMap.entrySet().toString(),travelledUp,travelledDown);
+        //String stats = String.format("%s rolled: %s, up=%d, down=%d",playerName, rolledMap.entrySet().toString(),travelledUp,travelledDown);
+        String stats= String.format("%s rolled: %s\n%s traversed: up-%d, down-%d",playerName,mapToString(rolledMap),playerName,travelledUp,travelledDown);
         return stats;
     }
+
+
+    public <K, V> String mapToString(Map<K, V> map) {
+        return map.entrySet()
+                .stream()
+                .map(entry -> entry.getKey() + "-" + entry.getValue())
+                .collect(Collectors.joining(", ", "", ""));
+    }
 }
+
