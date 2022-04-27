@@ -72,6 +72,7 @@ public class Puppet extends Actor
     }
     this.nbSteps = nbSteps;
     // task 5
+    //
     if (nbSteps > 0) {
       stats.rolled(nbSteps);
     }

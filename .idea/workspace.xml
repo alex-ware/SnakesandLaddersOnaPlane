@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="518f76ed-788b-474f-b109-85042d568dea" name="Default Changelist" comment="fix Strategy calling multiple times when one of the puppets on cell index 0">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_24_2022_10_08_AM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_24_2022_10_08_AM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/snakeladder/game/SimpleStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/snakeladder/game/Statistics.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/snakeladder/game/Strategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/DCD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/DM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/Diagrams.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Report.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Report.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Connection.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Connection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Cup.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Cup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Die.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Die.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/FrameTutorial.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/GameInitialiser.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/GameInitialiser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/GamePane.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/GamePane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/GamePlayCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/GamePlayCallback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Ladder.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Ladder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$ManualDieButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$ManualDieButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$SimulatedPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane$SimulatedPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/NavigationPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Puppet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Puppet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/Snake.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/Snake.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/game/custom/CustomGGButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/game/custom/CustomGGButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/utility/BackgroundDrawing.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/utility/BackgroundDrawing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/utility/PropertiesLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/utility/PropertiesLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/snakeladder/utility/ServicesRandom.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/snakeladder/utility/ServicesRandom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagrams/Blank diagram - Page 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/snakeladder/game/Puppet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/snakeladder/game/Puppet.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="28DzlbtSqkiOUlLdPIh61KOo4oN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="FrameTutorial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="snakeladder.game.FrameTutorial" />
+      <module name="SnakesandLaddersOnaPlane" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="snakeladder.game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FrameTutorial" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="518f76ed-788b-474f-b109-85042d568dea" name="Default Changelist" comment="" />
+      <created>1650766102151</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650766102151</updated>
+    </task>
+    <task id="LOCAL-00001" summary="fix Strategy calling multiple times when one of the puppets on cell index 0">
+      <created>1650768345532</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650768345533</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix Strategy calling multiple times when one of the puppets on cell index 0" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Strategy calling multiple times when one of the puppets on cell index 0" />
+  </component>
+</project>
